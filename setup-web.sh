@@ -1,14 +1,18 @@
 #!/bin/bash
 #
 echo '------------------------------------------'
-echo 'Begin of Script'
+echo 'Begin of web install'
 echo '------------------------------------------'
 echo \
 echo '------------------------------------------'
 echo 'Start updating and upgrading'
 apt update && apt upgrade -y
 #
-echo 'Test'
+apt install -y apache2 php php-xml php-pdo-mysql php-zip php-gd libapache2-mod-php
+a2enmod rewrite
+service apache2 restart
+
+chown -R www-data:www-data 
 #
 echo \
 echo '------------------------------------------'
