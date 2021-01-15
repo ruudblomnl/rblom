@@ -8,7 +8,7 @@ echo '------------------------------------------'
 echo 'Start updating and upgrading'
 apt update && apt upgrade -y
 #
-
+echo 'Test'
 #
 echo \
 echo '------------------------------------------'
